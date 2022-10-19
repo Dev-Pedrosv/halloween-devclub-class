@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s ease;
+}
+
+body {
+  background: linear-gradient(
+    136.16deg,
+    rgba(91, 135, 75, 0.97) 12.91%,
+    rgba(12, 55, 32, 0.87) 87.68%
+  );
+  width: 100%;
+  min-height: 100vh;
+  padding: 12px 60px;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #f8f8fd;
+  text-decoration: none;
+  position: relative;
+}
+
+.underline:after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  bottom: -3px;
+  left: 0px;
+  position: absolute;
+  background-color: #f8f8fd;
+  transition: 0.3s ease;
+}
+
+.underline:hover:after {
+  width: 100%;
+}
+
+.btn-link {
+  padding: 10px 20px;
+  border: 1px solid #f8f8fd;
+  border-radius: 41px;
+}
+
+.btn-link:hover {
+  opacity: 0.7;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-left {
+  width: 50%;
+  height: 450px;
+  position: relative;
+}
+
+.container-left img {
+  width: 100%;
+  position: absolute;
+  bottom: 60px;
+  left: -50px;
+  animation: moveAbobora 2s infinite alternate ease-in-out;
+}
+
+.container-left-info {
+  position: absolute;
+  bottom: 0px;
+  left: 50px;
+
+  padding-right: 20px;
+  border-right: 1px solid #a7de93;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 85px;
+}
+
+.container-left-info:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #a7de93;
+  position: absolute;
+  right: -6px;
+  top: -8px;
+}
+
+.container-left-info p:first-child {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 180%;
+  color: #ffffff;
+}
+
+.container-left-info p:last-child {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.container-right {
+  margin-top: 30px;
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+  color: #f8f8fd;
+}
+
+.container-right-info p:first-child {
+  font-weight: 900;
+  font-size: 68px;
+  line-height: 109%;
+  color: #ffffff;
+}
+
+.container-right-info p:last-child {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 180%;
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+.container-actions {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container-actions button {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
+  text-align: center;
+  color: #303056;
+  background-image: url("./assets/btn-primary.svg");
+  background-color: transparent;
+  border: none;
+  padding: 29px 43px;
+  cursor: pointer;
+}
+
+.container-actions button:hover {
+  opacity: 0.8;
+  color: #ffffff;
+}
+
+.container-actions a {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
+
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.container-actions a:hover {
+  opacity: 0.8;
+}
+
+.btn-ghost {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
+
+  color: #ffffff;
+
+  display: block;
+  margin: 12px auto;
+  background-color: transparent;
+  border: none;
+  background-image: url("./assets/btn-secondary.svg");
+  padding: 34px 43px;
+  cursor: pointer;
+}
+
+.btn-ghost:hover {
+  color: #303056;
+}
+
+@keyframes moveAbobora {
+  from {
+    transform: translate(-5%, -5%) rotate(15deg);
+  }
+
+  to {
+    transform: translate(0, 0) rotate(-15deg);
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    padding: 12px 24px;
+    overflow-x: hidden;
+  }
+
+  nav {
+    display: none;
+  }
+
+  section {
+    flex-direction: column;
+  }
+
+  .container-left {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+
+  .container-left img {
+    width: 80%;
+    left: 0;
+  }
+
+  .container-left-info {
+    left: auto;
+  }
+
+  .container-right {
+    width: 100%;
+    text-align: center;
+  }
+}
